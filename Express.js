@@ -9,7 +9,7 @@ const students=[];
 class Student{
     'name';
     'grade';
-    showDetails(){
+    getDetails(){
         console.log(`Name:${this.name},Grade:${this.grade}`)
     }
 }
@@ -21,7 +21,7 @@ app.post('/students',(req,res)=>{
 
     students.push(newStudent);
     res.status(201).json(newStudent);
-     console.log(newStudent.showDetails()) 
+     console.log(newStudent.getDetails()) 
 })
 
 app.get('/students',(req,res)=>{
